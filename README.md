@@ -15,3 +15,10 @@ And change the variables `fromaddr`, `password` and `toaddr` in `email_sender.py
 ### Attention
 
 DO NOT set the `frequenty` to zero or remove any limitations on that. It will cause the software to send an email for each frame where a face was detected. It could be a lot of e-mails and sending to much emails at once certantly is not a good idea.
+
+### Author
+
+**Maikel Maciel Rönnau**  
+*Computer Scientist  
+maikel.ronnau@ulbra.edu.br  
+[Linkedin](https://br.linkedin.com/in/maikelronnau)*
