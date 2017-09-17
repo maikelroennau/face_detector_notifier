@@ -42,13 +42,15 @@ def send_email():
     part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
 
     message.attach(part)
-
+    print 'Sending email to {}'.format(toaddr)
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(fromaddr, password)
     text = message.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
+
+    print 'E-mail sent to to {}.'.format(toaddr)
 
 
 if __name__ == "__main__":

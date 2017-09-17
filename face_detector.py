@@ -51,6 +51,8 @@ def send_notification(frame, instant, frequency):
 
         instant = time.time()
 
+        print 'Face detected. Sending notification.'
+
         if not os.path.exists('history'):
             os.makedirs('history')
 
@@ -67,7 +69,8 @@ def send_notification(frame, instant, frequency):
 
 
 if __name__ == '__main__':
-    shutil.rmtree('history')
+    if os.path.exists('history'):
+        shutil.rmtree('history')
 
     frequency = 3  # minutes
     instant = -1
