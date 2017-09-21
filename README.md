@@ -10,7 +10,7 @@ A stream of the camera will appear. When a face be detected, it will send and em
 
 Change the variable `frequency` in `face_detector.py` to the minimal amount of minutes you want between each email.
 
-And change the variables `fromaddr`, `password` and `toaddr` in `email_sender.py`, where `fromaddr` is an valid Gmail which you are able to loging using the value you set for `password`. The variable `toaddr` is the recipient you will send the email.
+And edit the `config.json` file to provide the `sender email` (the email the images will be sent from -it has to be a valid Gmail which you are able to login in using the very same email and password you provided), the `sender password` and the `receiver email` (the email address where the images will be sent to).
 
 ### Attention
 
