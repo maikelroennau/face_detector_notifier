@@ -1,6 +1,6 @@
 {
-    "sender_email": "facedetectorservice@gmail.com",
+    "sender_email": "senderemail@gmail.com",
     "sender_password": "facedetectorservice",
 
-    "receiver_email": "maikel.ronnau@hotmail.com"
+    "receiver_email": "receiveremail@anyprovider.com"
 }
