@@ -16,11 +16,7 @@ def get_newest_file(path):
     return max(paths, key=os.path.getctime)
 
 
-def send_email():
-    fromaddr = 'sender@email.com'
-    password = ''
-    toaddr = 'recipient@email.com'
-
+def send_email(fromaddr, password, toaddr):
     message = MIMEMultipart()
 
     message['From'] = fromaddr
@@ -33,13 +29,13 @@ def send_email():
 
     message.attach(MIMEText(body, 'plain'))
 
-    attachment = open(get_newest_file('history'), "rb")
+    attachment = open(get_newest_file('history'), 'rb')
     filename = 'face_detected.jpg'
 
     part = MIMEBase('application', 'octet-stream')
     part.set_payload((attachment).read())
     encoders.encode_base64(part)
-    part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+    part.add_header('Content-Disposition', 'attachment; filename= %s' % filename)
 
     message.attach(part)
     print 'Sending email to {}'.format(toaddr)
@@ -53,5 +49,5 @@ def send_email():
     print 'E-mail sent to to {}.'.format(toaddr)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     pass
