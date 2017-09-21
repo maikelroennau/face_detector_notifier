@@ -20,5 +20,5 @@ DO NOT set the `frequenty` to zero or remove any limitations on that. It will ca
 
 **Maikel Maciel Rönnau**  
 *Computer Scientist  
-maikel.ronnau@ulbra.edu.br  
-[Linkedin](https://br.linkedin.com/in/maikelronnau)*
+maikel.ronnau@gmail.com  
+[Linkedin](https://br.linkedin.com/in/maikelronnau) - [GitHub](https://github.com/maikelronnau)*
