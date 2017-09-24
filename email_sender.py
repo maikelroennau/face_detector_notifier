@@ -37,8 +37,9 @@ def send_email(fromaddr, password, toaddr):
     encoders.encode_base64(part)
     part.add_header('Content-Disposition', 'attachment; filename= %s' % filename)
 
+    print '[{}] Sending email to {}'.format(datetime.now().strftime('%d/%m/%Y %H:%M:%S'), toaddr)
+
     message.attach(part)
-    print 'Sending email to {}'.format(toaddr)
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(fromaddr, password)
@@ -46,7 +47,7 @@ def send_email(fromaddr, password, toaddr):
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 
-    print 'E-mail sent to to {}.'.format(toaddr)
+    print '[{}] E-mail sent to to {}.'.format(datetime.now().strftime('%d/%m/%Y %H:%M:%S'), toaddr)
 
 
 if __name__ == '__main__':

@@ -53,13 +53,12 @@ def send_notification(frame, instant, frequency, sender_email, sender_password, 
 
         instant = time.time()
 
-        print 'Face detected. Sending notification.'
+        print '[{}] Face detected. Sending notification.'.format(datetime.now().strftime('%d/%m/%Y %H:%M:%S'))
 
         if not os.path.exists('history'):
             os.makedirs('history')
 
-        filename = 'history/{}.jpg'.format(
-            datetime.now().strftime('%d-%m-%Y_%H-%M-%S'))
+        filename = 'history/{}.jpg'.format(datetime.now().strftime('%d-%m-%Y_%H-%M-%S'))
 
         cv2.imwrite(filename, frame)
 
@@ -90,5 +89,4 @@ if __name__ == '__main__':
             sender_password = parameters.get('sender_password')
             receiver_email = parameters.get('receiver_email')
 
-            run(instant, frequency, sender_email,
-                sender_password, receiver_email)
+            run(instant, frequency, sender_email, sender_password, receiver_email)
